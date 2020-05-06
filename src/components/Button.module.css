@@ -1,0 +1,8 @@
+.button {
+  background-color: whitesmoke;
+  color: black;
+  padding: 10px;
+  min-width: 80px;
+  border: solid;
+  border-color: transparent;
+}
