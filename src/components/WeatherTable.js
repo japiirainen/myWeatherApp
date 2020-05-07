@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./WeatherTable.module.css";
+//import styles from "./WeatherTable.module.css";
 
 const WeatherTable = (props) => {
   console.log("props", props);
