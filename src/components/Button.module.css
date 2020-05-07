@@ -1,3 +1,23 @@
-.button {
+/* .button {
+  width: 120px;
   color: #f0ece2;
+  border: none;
+}
+
+.button:hover {
+  border: 
+} */
+
+.button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: #f0ece2;
+}
+
+.button:hover {
+  opacity: 60%;
 }

@@ -21,20 +21,13 @@
   background: #222831;
 }
 
-.prevButton {
-}
-.nextButton {
-}
-
 .date {
-  border: solid black;
   width: 200px;
-  font-size: xx-large;
+  font-size: 40px;
   text-align: center;
   color: #f0ece2;
 }
 
 .table {
   width: 100%;
-  height: ;
 }

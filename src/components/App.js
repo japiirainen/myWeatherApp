@@ -3,6 +3,7 @@ import weatherData from "../data/weatherData";
 import Button from "./Button";
 import styles from "./App.module.css";
 import WeatherTable from "./WeatherTable";
+import Footer from "./Footer";
 
 function App() {
   const [currentDay, setPage] = useState(3);
@@ -28,6 +29,7 @@ function App() {
         <Button class={styles.nextButton} onClick={nextPage} label="next" />
       </div>
       <WeatherTable class={styles.table} day={weatherData[currentDay]} />
+      <Footer />
     </div>
   );
 }
