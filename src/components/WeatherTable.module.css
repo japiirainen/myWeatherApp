@@ -1,9 +1,17 @@
 table,
 td {
   border: 1px solid #333;
+  height: 40px;
 }
 
-tfoot {
-  background-color: #333;
-  color: #fff;
+.table {
+}
+
+.trTemp {
+}
+
+.trHum {
+}
+
+.trWind {
 }

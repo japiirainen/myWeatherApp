@@ -9,7 +9,7 @@ const Button = (props) => {
       class={styles.button}
       type="button"
     >
-      {props.label ? props.label : ""}
+      <span> {props.label ? props.label : ""}</span>
     </button>
   );
 };

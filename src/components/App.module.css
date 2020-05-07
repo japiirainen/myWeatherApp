@@ -1,9 +1,40 @@
-.top-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 .root {
-  margin: 50px 100px;
+  display: grid;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  background: #222831;
+}
+
+.prevButton {
+}
+.nextButton {
+}
+
+.date {
+  border: solid black;
+  width: 200px;
+  font-size: xx-large;
+  text-align: center;
+  color: #f0ece2;
+}
+
+.table {
+  width: 100%;
+  height: ;
 }

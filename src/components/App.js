@@ -17,12 +17,17 @@ function App() {
 
   return (
     <div class={styles.root}>
-      <div class={styles["top-bar"]}>
-        <Button onClick={previousPage} label="previous" />
-        <h1>{weatherData[currentDay].date}</h1>
-        <Button onClick={nextPage} label="next" />
+      <div class={styles.topBlock}></div>
+      <div class={styles.topBar}>
+        <Button
+          class={styles.prevButton}
+          onClick={previousPage}
+          label="previous"
+        />
+        <h1 class={styles.date}>{weatherData[currentDay].date}</h1>
+        <Button class={styles.nextButton} onClick={nextPage} label="next" />
       </div>
-      <WeatherTable day={weatherData[currentDay]} />
+      <WeatherTable class={styles.table} day={weatherData[currentDay]} />
     </div>
   );
 }
