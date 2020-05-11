@@ -1,54 +1,34 @@
-const weatherData = [
-  {
-    date: "06.05.2020",
-    temp: 10,
-    hum: 20,
-    sky: "clear",
-    wind: {
-      speed: 8,
-      direction: "north",
-    },
-  },
-  {
-    date: "07.05.2020",
-    temp: 12,
-    hum: 23,
-    sky: "clear",
-    wind: {
-      speed: 1,
-      direction: "south",
-    },
-  },
-  {
-    date: "08.05.2020",
-    temp: 5,
-    hum: 29,
-    sky: "cloudy",
-    wind: {
-      speed: 18,
-      direction: "east",
-    },
-  },
-  {
-    date: "09.05.2020",
-    temp: 9,
-    hum: 22,
-    sky: "cloudy",
-    wind: {
-      speed: 18,
-      direction: "east",
-    },
-  },
-  {
-    date: "10.05.2020",
-    temp: 32,
-    hum: 49,
-    sky: "cloudy",
-    wind: {
-      speed: 18,
-      direction: "east",
-    },
-  },
-];
+async function fetchData() {
+  const response = await fetch(
+    "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/daily?units=M&lang=en&lat=60.205490&lon=24.655899",
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
+        "x-rapidapi-key": "b000fe6d30msh9d9743987390201p14578fjsne4b0dbb4a528",
+      },
+    }
+  );
+  console.log("got weather response", response);
 
-export default weatherData;
+  return response.json();
+}
+
+async function getWeatherData() {
+  function mapData(item) {
+    return {
+      date: item.datetime,
+      temp: item.temp,
+      hum: item.rh,
+      wind: {
+        speed: item.wind_spd,
+        direction: item.wind_dir,
+      },
+    };
+  }
+
+  const data = await fetchData();
+  return data.data.map(mapData);
+}
+
+export { getWeatherData };

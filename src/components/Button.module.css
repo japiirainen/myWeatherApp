@@ -16,8 +16,9 @@
   margin: 0.5em;
   padding: 1em 2em;
   color: #f0ece2;
+  opacity: 60%;
 }
 
 .button:hover {
-  opacity: 60%;
+  opacity: 100%;
 }

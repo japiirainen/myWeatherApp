@@ -17,7 +17,9 @@ const WeatherTable = (props) => {
         </tr>
         <tr class={styles.trWind}>
           <td>Wind:</td>
-          <td>{`${props.day.wind.speed} m/s  ${props.day.wind.direction}`}</td>
+          <td>{`${Math.floor(props.day.wind.speed)} m/s  ${
+            props.day.wind.direction
+          }`}</td>
         </tr>
         <tr></tr>
       </tbody>
